@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FyyCommunity — Premium Key</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+:root{
+    --purple:#9d4edd;
+    --violet:#7b2cff;
+    --blue:#00c8ff;
+    --white:#ffffff;
+    --bg:#020108;
+}
+body{
+    min-height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:
+        radial-gradient(circle at 50% 45%,rgba(126,34,255,.18),transparent 30%),
+        radial-gradient(circle at 15% 20%,rgba(168,85,247,.12),transparent 30%),
+        radial-gradient(circle at 85% 80%,rgba(0,174,255,.10),transparent 30%),
+        #020108;
+    color:white;
+    font-family:Arial,Helvetica,sans-serif;
+}
+/* =========================
+   BACKGROUND
+========================= */
+.bg-glow{
+    position:fixed;
+    border-radius:50%;
+    filter:blur(100px);
+    pointer-events:none;
+    opacity:.22;
+}
+.glow1{
+    width:450px;
+    height:450px;
+    background:#7c2cff;
+    top:-230px;
+    left:-180px;
+    animation:orb1 10s ease-in-out infinite alternate;
+}
+.glow2{
+    width:420px;
+    height:420px;
+    background:#008cff;
+    right:-220px;
+    bottom:-220px;
+    animation:orb2 12s ease-in-out infinite alternate;
+}
+@keyframes orb1{
+    to{
+        transform:translate(170px,130px) scale(1.2);
+    }
+}
+@keyframes orb2{
+    to{
+        transform:translate(-150px,-110px) scale(1.2);
+    }
+}
+/* particles */
+.particles{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+}
+.particle{
+    position:absolute;
+    width:3px;
+    height:3px;
+    border-radius:50%;
+    background:white;
+    box-shadow:
+        0 0 8px #9d4edd,
+        0 0 18px #7b2cff;
+    animation:particle linear infinite;
+}
+@keyframes particle{
+    from{
+        transform:translateY(110vh);
+        opacity:0;
+    }
+    15%{
+        opacity:.8;
+    }
+    85%{
+        opacity:.5;
+    }
+    to{
+        transform:translateY(-20vh);
+        opacity:0;
+    }
+}
+/* =========================
+   CARD
+========================= */
+.card{
+    position:relative;
+    z-index:5;
+    width:min(92%,510px);
+    padding:38px;
+    border-radius:30px;
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.085),
+            rgba(255,255,255,.025)
+        );
+    border:1px solid rgba(168,85,247,.25);
+    backdrop-filter:blur(28px);
+    -webkit-backdrop-filter:blur(28px);
+    box-shadow:
+        0 40px 100px rgba(0,0,0,.7),
+        0 0 60px rgba(123,44,255,.08),
+        inset 0 1px 0 rgba(255,255,255,.1);
+    animation:cardIn 1s cubic-bezier(.2,.8,.2,1);
+}
+@keyframes cardIn{
+    from{
+        opacity:0;
+        transform:translateY(45px) scale(.92);
+        filter:blur(10px);
+    }
+    to{
+        opacity:1;
+        transform:none;
+        filter:blur(0);
+    }
+}
+/* =========================
+   NEW F LOGO
+========================= */
+.logo-area{
+    position:relative;
+    width:155px;
+    height:155px;
+    margin:0 auto 18px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+/* Energy circles */
+.energy{
+    position:absolute;
+    border-radius:50%;
+    pointer-events:none;
+}
+.energy.one{
+    width:150px;
+    height:58px;
+    border:2px solid rgba(166,74,255,.75);
+    transform:rotate(-22deg);
+    box-shadow:
+        0 0 12px #8b35ff,
+        0 0 30px rgba(139,53,255,.45);
+    animation:energy1 4s linear infinite;
+}
+.energy.two{
+    width:150px;
+    height:58px;
+    border:2px solid rgba(0,207,255,.65);
+    transform:rotate(27deg);
+    box-shadow:
+        0 0 12px #00cfff,
+        0 0 28px rgba(0,207,255,.4);
+    animation:energy2 5s linear infinite;
+}
+.energy.three{
+    width:125px;
+    height:125px;
+    border:1px solid rgba(164,70,255,.35);
+    border-top-color:#c084fc;
+    border-bottom-color:#00cfff;
+    animation:energy3 7s linear infinite;
+}
+@keyframes energy1{
+    to{
+        transform:rotate(338deg);
+    }
+}
+@keyframes energy2{
+    to{
+        transform:rotate(-333deg);
+    }
+}
+@keyframes energy3{
+    to{
+        transform:rotate(360deg);
+    }
+}
+/* Crown */
+.crown{
+    position:absolute;
+    top:2px;
+    z-index:5;
+    width:52px;
+    height:31px;
+    clip-path:polygon(
+        0 100%,
+        8% 20%,
+        32% 55%,
+        50% 0,
+        68% 55%,
+        92% 20%,
+        100% 100%
+    );
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #d7b5ff 30%,
+            #8b35ff 65%,
+            #ffffff 100%
+        );
+    filter:
+        drop-shadow(0 0 5px #b76cff)
+        drop-shadow(0 0 13px rgba(139,53,255,.8));
+    animation:crownFloat 3s ease-in-out infinite;
+}
+@keyframes crownFloat{
+    0%,100%{
+        transform:translateY(0) rotate(-3deg);
+    }
+    50%{
+        transform:translateY(-5px) rotate(3deg);
+    }
+}
+/* Main F */
+.logo-f{
+    position:relative;
+    z-index:4;
+    width:82px;
+    height:94px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transform:skew(-8deg) rotate(-4deg);
+    font-family:Arial Black,Arial,sans-serif;
+    font-size:82px;
+    font-weight:1000;
+    font-style:italic;
+    line-height:1;
+    color:white;
+    background:
+        linear-gradient(
+            150deg,
+            #ffffff 5%,
+            #e7d2ff 25%,
+            #b55cff 48%,
+            #7126ff 70%,
+            #00bfff 100%
+        );
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    -webkit-text-stroke:2px rgba(255,255,255,.85);
+    filter:
+        drop-shadow(4px 5px 0 #4c169c)
+        drop-shadow(0 0 8px #b45cff)
+        drop-shadow(0 0 22px rgba(125,39,255,.95))
+        drop-shadow(0 0 40px rgba(0,196,255,.35));
+    animation:fFloat 3s ease-in-out infinite;
+}
+/* Extra 3D layer */
+.logo-f::after{
+    content:"F";
+    position:absolute;
+    z-index:-1;
+    top:5px;
+    left:5px;
+    font-size:82px;
+    font-weight:1000;
+    font-style:italic;
+    color:#431487;
+    -webkit-text-stroke:2px #32105e;
+    filter:blur(.2px);
+}
+@keyframes fFloat{
+    0%,100%{
+        transform:
+            skew(-8deg)
+            rotate(-4deg)
+            translateY(0)
+            scale(1);
+    }
+    50%{
+        transform:
+            skew(-8deg)
+            rotate(-2deg)
+            translateY(-7px)
+            scale(1.035);
+    }
+}
+/* =========================
+   TITLE
+========================= */
+.title{
+    text-align:center;
+    font-size:31px;
+    font-weight:900;
+    font-style:italic;
+    letter-spacing:-1px;
+    background:
+        linear-gradient(
+            90deg,
+            #ffffff,
+            #d9b8ff,
+            #ffffff,
+            #9eeeff,
+            #ffffff
+        );
+    background-size:250%;
+    -webkit-background-clip:text;
+    color:transparent;
+    animation:titleShine 5s linear infinite;
+}
+@keyframes titleShine{
+    to{
+        background-position:250%;
+    }
+}
+.subtitle{
+    text-align:center;
+    margin-top:8px;
+    color:#9292a8;
+    font-size:13px;
+    letter-spacing:1px;
+}
+/* =========================
+   ONLINE
+========================= */
+.status{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    margin-top:15px;
+    color:#72f6a5;
+    font-size:12px;
+    font-weight:bold;
+}
+.status-dot{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#4ade80;
+    box-shadow:
+        0 0 8px #4ade80,
+        0 0 18px #4ade80;
+    animation:pulse 1.5s infinite;
+}
+@keyframes pulse{
+    50%{
+        transform:scale(1.7);
+        opacity:.4;
+    }
+}
+/* =========================
+   KEY
+========================= */
+.key-box{
+    margin-top:27px;
+    padding:20px;
+    border-radius:20px;
+    background:rgba(0,0,0,.28);
+    border:1px solid rgba(155,92,246,.18);
+    box-shadow:
+        inset 0 0 30px rgba(123,44,255,.035);
+}
+.label{
+    margin-bottom:10px;
+    color:#c084fc;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+.key{
+    padding:15px;
+    border-radius:13px;
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(155,92,246,.3);
+    color:white;
+    font-size:14px;
+    line-height:1.5;
+    word-break:break-all;
+    box-shadow:
+        inset 0 0 20px rgba(139,53,255,.04);
+}
+/* =========================
+   BUTTON
+========================= */
+.copy-btn{
+    position:relative;
+    overflow:hidden;
+    width:100%;
+    margin-top:15px;
+    padding:16px;
+    border:none;
+    border-radius:15px;
+    color:white;
+    font-size:15px;
+    font-weight:900;
+    letter-spacing:.5px;
+    cursor:pointer;
+    background:
+        linear-gradient(
+            100deg,
+            #7624ff,
+            #a13cff,
+            #00aef7,
+            #7624ff
+        );
+    background-size:250%;
+    box-shadow:
+        0 12px 35px rgba(116,36,255,.35),
+        inset 0 1px 0 rgba(255,255,255,.3);
+    animation:buttonMove 4s linear infinite;
+    transition:.25s ease;
+}
+@keyframes buttonMove{
+    to{
+        background-position:250%;
+    }
+}
+.copy-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:
+        0 18px 50px rgba(123,44,255,.55),
+        0 0 25px rgba(0,196,255,.2);
+}
+.copy-btn:active{
+    transform:scale(.97);
+}
+.copy-btn::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:60%;
+    height:100%;
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.4),
+            transparent
+        );
+    transform:skewX(-20deg);
+    animation:shine 3s infinite;
+}
+@keyframes shine{
+    0%{
+        left:-120%;
+    }
+    45%,100%{
+        left:150%;
+    }
+}
+/* =========================
+   MESSAGE
+========================= */
+.message{
+    height:18px;
+    margin-top:11px;
+    text-align:center;
+    color:#4ade80;
+    font-size:12px;
+    font-weight:bold;
+    opacity:0;
+    transform:translateY(5px);
+    transition:.3s ease;
+}
+.message.show{
+    opacity:1;
+    transform:translateY(0);
+}
+/* =========================
+   FOOTER
+========================= */
+.footer{
+    margin-top:22px;
+    text-align:center;
+    color:#606071;
+    font-size:11px;
+}
+.footer b{
+    color:#a855f7;
+}
+/* =========================
+   MOBILE
+========================= */
+@media(max-width:500px){
+    .card{
+        padding:30px 21px;
+    }
+    .logo-area{
+        width:140px;
+        height:140px;
+    }
+    .energy.one,
+    .energy.two{
+        width:135px;
+    }
+    .title{
+        font-size:27px;
+    }
+    .key{
+        font-size:13px;
+    }
+}
+</style>
+</head>
+<body>
+<div class="bg-glow glow1"></div>
+<div class="bg-glow glow2"></div>
+<div class="particles" id="particles"></div>
+<div class="card">
+    <!-- PREMIUM F LOGO -->
+    <div class="logo-area">
+        <div class="energy one"></div>
+        <div class="energy two"></div>
+        <div class="energy three"></div>
+        <div class="crown"></div>
+        <div class="logo-f">F</div>
+    </div>
+    <h1 class="title">
+        FyyCommunity
+    </h1>
+    <p class="subtitle">
+        PREMIUM KEY SYSTEM
+    </p>
+    <div class="status">
+        <span class="status-dot"></span>
+        SYSTEM ONLINE
+    </div>
+    <div class="key-box">
+        <div class="label">
+            Your Access Key
+        </div>
+        <div class="key" id="key">
+            FyyComunityHazard - GdieneidjWiehdjdj
+        </div>
+        <button class="copy-btn" onclick="copyKey()">
+            COPY KEY
+        </button>
+        <div class="message" id="message">
+            ✓ Key copied successfully
+        </div>
+    </div>
+    <div class="footer">
+        Protected by <b>FyyCommunity</b> • Premium Access
+    </div>
+</div>
+<script>
+/* PARTICLES */
+const particleBox =
+    document.getElementById("particles");
+for(let i = 0; i < 55; i++){
+    const particle =
+        document.createElement("span");
+    particle.className = "particle";
+    particle.style.left =
+        Math.random() * 100 + "%";
+    particle.style.animationDuration =
+        (5 + Math.random() * 10) + "s";
+    particle.style.animationDelay =
+        (Math.random() * 10) + "s";
+    particle.style.transform =
+        `scale(${0.4 + Math.random()})`;
+    particleBox.appendChild(particle);
+}
+/* COPY KEY */
+function copyKey(){
+    const key =
+        document.getElementById("key").innerText.trim();
+    const message =
+        document.getElementById("message");
+    navigator.clipboard.writeText(key)
+    .then(() => {
+        message.classList.add("show");
+        setTimeout(() => {
+            message.classList.remove("show");
+        },2500);
+    })
+    .catch(() => {
+        const textarea =
+            document.createElement("textarea");
+        textarea.value = key;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand("copy");
+        textarea.remove();
+        message.classList.add("show");
+        setTimeout(() => {
+            message.classList.remove("show");
+        },2500);
+    });
+}
+</script>
+</body>
+</html>
